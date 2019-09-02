@@ -1,0 +1,99 @@
+<!-- cdn -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Li | UC Berkeley Sophomore in Stat & CS</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script src="https://kit.fontawesome.com/f0bca21505.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+</head>
+
+<nav class="navbar navbar-splash navbar-expand-md">
+    <div class="container">
+        <!-- <div class="navbar-brand" href="#">🌟🌟Star Li</div> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Authentication Links -->
+                <li class="nav-item">
+                    <a id="about" class="item-text" href="/">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="item-text" href="/academic">Academics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="item-text" href="/project">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="item-text" href="/resume">CV</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<style>
+.container {
+    max-width: 100%;
+}
+.navbar-brand {
+    color: white;
+    margin-left: 10px;
+}
+.item-text {
+    color: white;
+    margin: 0 3px;
+}
+.navbar-splash {
+    background-color: #30404D;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    width: 100%;
+    transition: 100ms;
+    z-index: 5;
+}
+.nav-item {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: transparent;
+}
+.nav-item:hover {
+    opacity: 0.8;
+}
+.item-text:hover {
+    text-decoration: none;
+    color: white;
+}
+.dropdown-toggle {
+    height: 34px;
+    background-color: transparent;
+    border-color: transparent;
+}
+</style>
+
+<script>
+$("#about").on('click', (e) => {
+    e.preventDefault();
+    var loc = window.location.pathname
+    if (loc === '/') {
+        var dist = $('.about-title').offset().top;
+        window.scroll({
+            top: dist - 70,
+            left: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        window.location = "/";
+    }
+})
+</script>

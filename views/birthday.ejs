@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>BBC is soooo good</title>
+    </head>
+    <body>
+        <!-- views/partials/head.ejs -->
+        <header>
+            <% include ./partials/nav %>
+        </header>
+        <div class="hero-container">
+            <div class="hero-background">
+                <img src="https://yvb.moe/ctb/images/campanile_night.jpg" class="hero-image"/>
+            </div>
+            <div class="container hero-text-container">
+                <h1 class="hero-title">龙🐲哥生日快乐🎂！</h1>
+                <p class="hero-description">
+                    Jason Luv, Julio Gomez等发来贺电。
+                </p>
+                <p class="hero-login-notice">
+                    可这改变不了你是个孤儿的事实。
+                </p>
+                <ul class="list-inline link-collection">
+                    <li class="list-inline-item">
+                        <a href="javascript:alert('点你吗呢孤儿')" class="link">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="javascript:alert('点你吗呢孤儿')" class="link">
+                            <i class="fas fa-book fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="javascript:alert('点你吗呢孤儿')" class="link">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="javascript:alert('点你吗呢孤儿')" class="link">
+                            <i class="fas fa-envelope-open fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="javascript:alert('点你吗呢孤儿')" class="link">
+                            <i class="fab fa-zhihu fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hero-intro-container">
+            <h1 class="aboutme" id="aboutme">About Me</h1>
+            <p>我是个废物，这辈子一事无成</p>
+        </div> 
+    </body>
+</html>
+
+<style>
+.body {
+    font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+}
+@keyframes slideUpShow {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero-description {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 22px;
+    line-height: 1.5;
+}
+.hero-login-notice {
+    animation: slideUpShow 500ms both;
+    animation-delay: 100ms;
+    color: white;
+    margin-top: 30px;
+    padding: 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+    background: rgba(125, 141, 224, 0.8);
+    border-radius: 5ch;
+}
+.hero-title {
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+    padding-top: 180px;
+    padding-bottom: 30px;
+}
+.hero-text-container {
+    position: relative;
+    text-align: center;
+    z-index: 3;
+    width: 1170px;
+}
+.hero-intro-container {
+    position: relative;
+    text-align: center;
+    z-index: 3;
+    width: 100%;
+    height: 1000px;
+}
+.hero-container {
+    height: 650px;
+    position: relative;
+}
+.hero-background {
+    /* background-color: black; */
+    z-index: 2;
+    position: absolute;
+    background-image: linear-gradient(45deg, #120fe6 0%, rgba(135, 117, 192, 0.9) 100%);
+    transform:skewY(-3deg);
+    margin-top: -40px;
+}
+.hero-image {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    opacity: 0.1;
+}
+.navbar-splash {
+    background-color: transparent;
+    position: fixed;
+}
+.link-collection {
+    animation: slideUpShow 500ms both;
+    animation-delay: 100ms;
+    margin-top: 20px;
+}
+.link {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+.link:hover {
+    color: gray;
+}
+</style>    
+<script>
+    // the navbar is none-static only in index page 
+    $(function () {
+        function scroll() {
+            var top = 20;
+            var scrollTop = $(window).scrollTop();
+            console.log("scrolled...");
+            if (scrollTop > top) {
+                $('.navbar-splash').css('background-color', '#30404D');
+            }
+            else {
+                $('.navbar-splash').css('background-color', 'transparent')
+            }
+        }
+        $(window).on('scroll', function() {
+            scroll()
+        });
+    });
+</script>

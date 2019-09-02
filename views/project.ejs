@@ -1,0 +1,48 @@
+<!-- this page is the main body page for the academic part -->
+<html lang="en">
+    <body>
+        <header>
+            <% include ./partials/nav %>
+        </header>
+        <div class="hero-intro-container construction">
+            <h1>Sorry, this web page is still under construction.</h1>
+            will redirect you to the home page in <p id="countdown">5</p> 
+            <h4>Contact <a class="email">listar2000@berkeley.edu</a> for info</h4>
+        </div>
+        
+    </body>
+</html>
+
+<style>
+.construction {
+    margin-top: 200px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+#countdown {
+    font-size: 24px;
+    font-weight: 600;
+}
+.email {
+    color:  mediumvioletred !important;
+    text-align: center;
+}
+</style>
+
+<script>
+ var seconds = 10;
+    
+function countdown() {
+    seconds = seconds - 1;
+    if (seconds < 0) {
+        // Chnage your redirection link here
+        window.location = "/";
+    } else {
+        // Update remaining seconds
+        document.getElementById("countdown").innerHTML = seconds + "s"; 
+        // Count down using javascript
+        window.setTimeout("countdown()", 1000);
+    }
+}
+countdown();
+</script>
