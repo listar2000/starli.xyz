@@ -20,7 +20,7 @@ server.get('/project', function(req, res) {
 
 server.get('/resume', function(req, res) {
     var fs = require('fs');
-    var readStream = fs.createReadStream(__dirname + '/views/static/Sida Li Resume.pdf')
+    var readStream = fs.createReadStream(__dirname + '/views/static/Star-Li-Resume.pdf')
     readStream.pipe(res);
  });
 
