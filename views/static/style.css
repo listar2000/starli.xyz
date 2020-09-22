@@ -31,6 +31,10 @@
     font-size: 18px;
     color: #463d3dbd;
 }
+.about-img {
+    max-width: 90%;
+    margin-top: -80px;
+}
 .bottom-word {
     font-family: 'Nunito', sans-serif;
     padding-top: 30px;
@@ -88,6 +92,7 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     height: 400px;
 }
 .hero-container {
@@ -114,7 +119,8 @@
     margin-top: -40px;
 }
 .hero-image {
-    height: 100%;
+    /* height: 100%; */
+    height: 650px;
     object-fit: cover;
     width: 100%;
     opacity: 0.1;

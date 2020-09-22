@@ -19,9 +19,14 @@ server.get('/project', function(req, res) {
 })
 
 server.get('/resume', function(req, res) {
-    var fs = require('fs');
-    var readStream = fs.createReadStream(__dirname + '/views/static/Star-Li-Resume.pdf')
-    readStream.pipe(res);
+    try {
+        var fs = require('fs');
+        var readStream = fs.createReadStream(__dirname + '/views/static/Star-Resume-2019-11.pdf')
+        readStream.pipe(res);
+    } catch (error) {
+        console.log(error)
+    }
+   
  });
 
 server.listen(port, function() {
